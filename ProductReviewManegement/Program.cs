@@ -20,6 +20,7 @@
             };
             ProductMangement product = new ProductMangement();
             product.AddProductList(productReviewList);
+            product.RetriveTopRecords();
 
         }
     }
