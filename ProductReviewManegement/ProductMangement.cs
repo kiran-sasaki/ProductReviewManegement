@@ -56,6 +56,11 @@ namespace ProductReviewManegement
             var result = this.productReviewList.Average(x => x.Rating);
             Console.WriteLine(result);
         }
+        public void RetiveUsingMessage(List<ProductReview> list)
+        {
+            var result = this.productReviewList.Where(x => x.Review.Contains("nice"));
+            Display(result.ToList());
+        }
         public void Display(List<ProductReview> productReviews)
         {
             foreach (var productReview in productReviews)
