@@ -22,7 +22,8 @@
             product.AddProductList(productReviewList);
             //product.RetriveTopRecords();
             //product.RetriveAllRecords();
-            product.RetriveAllRecordsGroupby();
+            //product.RetriveAllRecordsGroupby();
+            product.RetriveAllRecordsFileds();
         }
     }
 }
