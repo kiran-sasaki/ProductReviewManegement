@@ -51,6 +51,11 @@ namespace ProductReviewManegement
             var result = this.productReviewList.Where(x=>x.isLike=true);
             Display(result.ToList());
         }
+        public void AverageRating()
+        {
+            var result = this.productReviewList.Average(x => x.Rating);
+            Console.WriteLine(result);
+        }
         public void Display(List<ProductReview> productReviews)
         {
             foreach (var productReview in productReviews)
