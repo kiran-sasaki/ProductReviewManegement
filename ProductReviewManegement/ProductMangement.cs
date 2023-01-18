@@ -24,6 +24,15 @@ namespace ProductReviewManegement
             var result = this.productReviewList.Where(x => x.Rating == 3 && (x.ProductID == 1 || x.ProductID == 4 || x.ProductID == 9));
             Display(result.ToList());
         }
+        public void RetriveAllRecordsGroupby()
+        {
+            var result = this.productReviewList.GroupBy(x => x.ProductID);
+            foreach (var data in result)
+            {
+                Console.WriteLine(data.Count());
+                Display(data.ToList());
+            }
+        }
         public void Display(List<ProductReview> productReviews)
         {
             foreach (var productReview in productReviews)
