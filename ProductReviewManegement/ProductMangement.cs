@@ -33,6 +33,14 @@ namespace ProductReviewManegement
                 Display(data.ToList());
             }
         }
+        public void RetriveAllRecordsFileds()
+        {
+            var result = this.productReviewList.Select(x => new { x.ProductID, x.Rating });
+            foreach (var data in result)
+            {
+                Console.WriteLine(data.ProductID + " " + data.Rating);
+            }
+        }
         public void Display(List<ProductReview> productReviews)
         {
             foreach (var productReview in productReviews)
