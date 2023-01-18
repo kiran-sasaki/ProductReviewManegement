@@ -13,7 +13,7 @@
                 new ProductReview(){ProductID=9,UserId= 3,Rating =5,Review="bad",isLike=false},
                 new ProductReview(){ProductID=2,UserId= 16,Rating =4,Review="good",isLike=false},
                 new ProductReview(){ProductID=7,UserId= 9,Rating =4,Review="worst",isLike=true},
-                new ProductReview(){ProductID=4,UserId= 8,Rating =1,Review="good",isLike=true},
+                new ProductReview(){ProductID=4,UserId= 8,Rating =4,Review="good",isLike=true},
                 new ProductReview(){ProductID=9,UserId= 5,Rating =4,Review="good",isLike=false},
                 new ProductReview(){ProductID=2,UserId= 45,Rating =5,Review="good",isLike=true},
                 new ProductReview(){ProductID=9,UserId= 10,Rating =5,Review="good",isLike=true}
@@ -21,7 +21,7 @@
             ProductMangement product = new ProductMangement();
             product.AddProductList(productReviewList);
             product.RetriveTopRecords();
-
+            product.RetriveAllRecords();
         }
     }
 }
