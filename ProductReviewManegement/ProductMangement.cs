@@ -46,6 +46,11 @@ namespace ProductReviewManegement
             var result = this.productReviewList.OrderByDescending(x => x.Rating).Skip(5);
             Display(result.ToList());
         }
+        public void RetrieveRecordsIsLike()
+        {
+            var result = this.productReviewList.Where(x=>x.isLike=true);
+            Display(result.ToList());
+        }
         public void Display(List<ProductReview> productReviews)
         {
             foreach (var productReview in productReviews)
