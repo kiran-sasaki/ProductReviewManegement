@@ -20,8 +20,9 @@
             };
             ProductMangement product = new ProductMangement();
             product.AddProductList(productReviewList);
-            product.RetriveTopRecords();
-            product.RetriveAllRecords();
+            //product.RetriveTopRecords();
+            //product.RetriveAllRecords();
+            product.RetriveAllRecordsGroupby();
         }
     }
 }
